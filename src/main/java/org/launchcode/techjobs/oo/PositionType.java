@@ -16,13 +16,12 @@ public class PositionType {
         this.value = value;
     }
 
-    // TODO: Add a custom toString() method that returns the data stored in 'value'.
+    // add custom toString() returning data stored in 'value'
 
-    // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
-    //  their id fields match.
+    // add custom equals & hashCode methods
+    // two PositionType objects "equal" that share id
 
-    // Getters and Setters:
-
+    // getters & setters:
     public int getId() {
         return id;
     }
