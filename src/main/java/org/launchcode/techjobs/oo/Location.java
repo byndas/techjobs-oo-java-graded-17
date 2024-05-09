@@ -8,15 +8,19 @@ public class Location {
     private static int nextId = 1;
     private String value;
 
+    ////////////////////////////////////////////////////////////////////////////
     public Location() {
         id = nextId;
         nextId++;
     }
 
-    // add constructor taking string param & assigns it to 'value' field
-    // constructor calls empty constructor to initialize 'id' field
+    public Location(String value) {
+        this(); // makes initializing id default behavior
+        this.value = value;
+    }
 
-    // custom toString(), equals(), & hashCode() methods:
+    ////////////////////////////////////////////////////////////////////////////
+    // custom toString(), equals(), hashCode() methods:
     @Override
     public String toString() {
         return value;
@@ -35,8 +39,8 @@ public class Location {
         return Objects.hash(getId());
     }
 
+    ////////////////////////////////////////////////////////////////////////////
     // getters & setters:
-
     public int getId() {
         return id;
     }
@@ -48,5 +52,4 @@ public class Location {
     public void setValue(String value) {
         this.value = value;
     }
-
 }

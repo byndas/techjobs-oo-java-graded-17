@@ -8,17 +8,19 @@ public class Employer {
     private static int nextId = 1;
     private String value;
 
+    ////////////////////////////////////////////////////////////////////////////
     public Employer() {
         id = nextId;
         nextId++;
     }
 
     public Employer(String value) {
-        this();
+        this(); // makes initializing id default behavior
         this.value = value;
     }
 
-    // custom toString(), equals(), & hashCode() methods:
+    ////////////////////////////////////////////////////////////////////////////
+    // custom toString(), equals(), hashCode() methods:
     @Override
     public String toString() {
         return value;
@@ -26,7 +28,7 @@ public class Employer {
 
     @Override
     public boolean equals(Object o) {
-        // Two objects equal if share same id
+        // objects are equal if share same id
         if (this == o) return true;
         if (!(o instanceof Employer)) return false;
         Employer employer = (Employer) o;
@@ -38,8 +40,8 @@ public class Employer {
         return Objects.hash(getId());
     }
 
+    ////////////////////////////////////////////////////////////////////////////
     // getters & setters:
-
     public int getId() {
         return id;
     }
@@ -51,5 +53,4 @@ public class Employer {
     public void setValue(String value) {
         this.value = value;
     }
-
 }

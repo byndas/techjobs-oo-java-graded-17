@@ -8,6 +8,7 @@ public class CoreCompetency {
     private static int nextId = 1;
     private String value;
 
+    ////////////////////////////////////////////////////////////////////////////
     public CoreCompetency() {
         this.id = nextId;
         nextId++;
@@ -18,8 +19,8 @@ public class CoreCompetency {
         this.value = value;
     }
 
-    // custom toString(), equals(), & hashCode() methods:
-
+    ////////////////////////////////////////////////////////////////////////////
+    // custom toString(), equals(), hashCode() methods:
     @Override
     public String toString() {
         return value;
@@ -27,10 +28,11 @@ public class CoreCompetency {
 
     @Override
     public boolean equals(Object o) {
+        // objects are equal if share same id
         if (this == o) return true;
         if (!(o instanceof CoreCompetency)) return false;
-        CoreCompetency that = (CoreCompetency) o;
-        return id == that.id;
+        CoreCompetency skill = (CoreCompetency) o;
+        return id == skill.id;
     }
 
     @Override
@@ -38,7 +40,16 @@ public class CoreCompetency {
         return Objects.hash(id);
     }
 
-    //  generate getter & setter for 'value' field
-    //  but ONLY a getter for 'id' field
+    ////////////////////////////////////////////////////////////////////////////
+    // getters & setters:
+    public int getId() {
+        return id;
+    }
 
+    public String getValue() {
+        return value;
+    }
+    public void setValue(String value) {
+        this.value = value;
+    }
 }
