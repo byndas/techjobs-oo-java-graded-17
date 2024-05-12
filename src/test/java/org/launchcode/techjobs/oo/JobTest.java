@@ -128,9 +128,8 @@ public class JobTest {
 
 	@Test
 	public void testIdOnlyJob() {
-
-//		if Job object ONLY contains id field data
-//			return "OOPS! This job does not seem to exist."
+//		tests if Job object ONLY contains id field data
+//			job.toString() returns "OOPS! This job does not seem to exist."
 
 		Job job = new Job();
 		assertEquals(job.toString(), "OOPS! This job does not seem to exist.");
