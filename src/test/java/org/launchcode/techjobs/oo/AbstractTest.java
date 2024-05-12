@@ -5,9 +5,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/**
- * Created by LaunchCode
- */
 public class AbstractTest {
 
     protected Class getClassByName(String className) throws ClassNotFoundException {

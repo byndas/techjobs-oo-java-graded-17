@@ -15,12 +15,11 @@ public class CoreCompetency {
     }
 
     public CoreCompetency(String value) {
-        this();
+        this(); // initializes id by default
         this.value = value;
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    // custom toString(), equals(), hashCode() methods:
     @Override
     public String toString() {
         return value;
@@ -41,7 +40,6 @@ public class CoreCompetency {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    // getters & setters:
     public int getId() {
         return id;
     }

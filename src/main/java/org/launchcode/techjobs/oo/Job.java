@@ -26,7 +26,7 @@ public class Job {
         PositionType positionType,
         CoreCompetency coreCompetency
     ) {
-        this();
+        this(); // calls first constructor to initialize id by default
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -37,11 +37,39 @@ public class Job {
     ////////////////////////////////////////////////////////////////////////////
     @Override
     public boolean equals(Object o) {
-        // objects are equal if share same id
+        // objects sharing same id are equal
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
         Job job = (Job) o;
         return getId() == job.getId();
+    }
+
+    @Override
+    public String toString() {
+
+        String dna = "Data not available";
+
+        String strName = name;
+        String strEmployer = employer.toString();
+        String strLocation =  location.toString();
+        String strPositionType = positionType.toString();
+        String strCoreCompetency = coreCompetency.toString();
+
+        if (strName.isEmpty()) { strName = dna; }
+        if (strEmployer.isEmpty()) { strEmployer = dna; }
+        if (strLocation.isEmpty()) { strLocation = dna; }
+        if (strPositionType.isEmpty()) { strPositionType = dna; }
+        if (strCoreCompetency.isEmpty()) { strCoreCompetency = dna; }
+
+        return
+            System.lineSeparator() +
+            "ID: "+ id + System.lineSeparator() +
+            "Name: "+ strName + System.lineSeparator() +
+            "Employer: "+ strEmployer + System.lineSeparator() +
+            "Location: "+ strLocation + System.lineSeparator() +
+            "Position Type: "+ strPositionType + System.lineSeparator() +
+            "Core Competency: "+ strCoreCompetency +
+            System.lineSeparator();
     }
 
     @Override
@@ -50,7 +78,6 @@ public class Job {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    // getters & setters:
     public int getId() {
         return id;
     }

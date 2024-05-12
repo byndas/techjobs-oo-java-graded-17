@@ -18,6 +18,7 @@ public class PositionType {
         this.value = value;
     }
 
+    ///////////////////////////////////////////////////////////////////////////
     @Override
     public String toString() {
         return value;
@@ -25,7 +26,7 @@ public class PositionType {
 
     @Override
     public boolean equals(Object o) {
-        // objects are equal if share same id
+        // objects sharing same id are equal
         if (this == o) return true;
         if (!(o instanceof PositionType)) return false;
         PositionType position = (PositionType) o;
@@ -37,8 +38,7 @@ public class PositionType {
         return Objects.hash(getId());
     }
 
-
-    // getters & setters:
+    ////////////////////////////////////////////////////////////////////////////
     public int getId() {
         return id;
     }

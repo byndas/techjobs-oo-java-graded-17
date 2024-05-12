@@ -13,9 +13,6 @@ import static java.lang.System.lineSeparator;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-/**
- * Created by LaunchCode
- */
 public class TestTaskFive extends AbstractTest {
 
     @Mocked Job job;

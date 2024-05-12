@@ -15,12 +15,11 @@ public class Location {
     }
 
     public Location(String value) {
-        this(); // makes initializing id default behavior
+        this(); // initializes id by default
         this.value = value;
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    // custom toString(), equals(), hashCode() methods:
     @Override
     public String toString() {
         return value;
@@ -40,15 +39,9 @@ public class Location {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    // getters & setters:
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
-    public String getValue() {
-        return value;
-    }
-
+    public String getValue() { return value; }
     public void setValue(String value) {
         this.value = value;
     }

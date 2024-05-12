@@ -1,8 +1,10 @@
 package org.launchcode.techjobs.oo;
+
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
-/*
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
         Job job3 = new Job("Ice cream tester", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Tasting ability"));
@@ -15,12 +17,12 @@ public class Main {
         for (Job job : jobs){
             System.out.println(job);
         }
-*/
     }
 }
 
 /*
 TODO INSTRUCTIONS:
+
  ////////////////////////////////////////////////////////////////////////////
     use objects to encapsulate data & methods
     use IntelliJ generator to automate routine tasks
@@ -57,28 +59,28 @@ TODO INSTRUCTIONS:
             so that using object instance in another string context
                 System.out.println(job.getEmployer()); --> prints employer name
  ////////////////////////////////////////////////////////////////////////////
-    reasons to do this:
-        eliminate data duplicates
-        multiple jobs share field value
-            for example, multiple jobs have position type “Web - Full Stack”
+    why do this?
+      1. eliminate data duplicates
+      2. multiple jobs share field value
+            for example, multiple jobs have position type "Web - Full Stack"
                 since each employer may list three jobs
                     storing these field values as strings in each Job object
                         repeats that data across the app
  ================================================================================
-        objects have a single PositionType object with value “Web - Full Stack”
+      3. objects have a single PositionType object with value "Web - Full Stack"
             each job using that position type refers to an object
                 use one Employer object for each employer instance
  ================================================================================
-        beyond reducing raw memory data,
+       4. beyond reducing raw memory data,
             this updates data in one place,
                 Employer object is a company instance
- ////////////////////////////////////////////////////////////////////////////
-    easy to add data properties
-        Employer object has:
-            address, primary contact, employer's job list
-                if Location object needs zip-code list for that location
-                    storing these four new properties as strings
-                        within Job class is too complex
+ ================================================================================
+       5. easy to add future data properties
+            Employer object has:
+                address, primary contact, employer's job list
+                    if Location object needs zip-code list for that location
+                        storing these four new properties as strings
+                            within Job class is too complex
  ////////////////////////////////////////////////////////////////////////////
  run tests from their own files
  ////////////////////////////////////////////////////////////////////////////
@@ -89,7 +91,8 @@ TODO INSTRUCTIONS:
  ////////////////////////////////////////////////////////////////////////////
  run only tests associated with that task
         right-click on test file & select "Run TestTask#"
- /////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////
  TASKS:
     review Employer class to see how to assign unique ID
  ================================================================================
