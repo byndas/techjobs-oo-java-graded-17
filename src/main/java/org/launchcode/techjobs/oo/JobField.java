@@ -3,7 +3,9 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
 public abstract class JobField {
-// fields, constructors, getters/setters, custom methods ALL FOUR classes share
+//  contains: fields, constructors, getters/setters, custom methods
+//    common to each child class
+	////////////////////////////////////////////////////////////////////////////
 	private int id;
 	private static int nextId = 1;
 	private String value;
@@ -25,7 +27,7 @@ public abstract class JobField {
 		// this refers to job1 & obj refers to job2
 		if (this == obj) { return true; }
 		if (!(obj instanceof JobField)) { return false; }
-		// casting Object obj to JobField type
+		// casting Object obj to JobField type & assigning to jobVar
 		JobField jobVar = (JobField) obj;
 		// equivalent objects have same id
 		return id == jobVar.id;

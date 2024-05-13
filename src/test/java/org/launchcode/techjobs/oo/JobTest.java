@@ -23,7 +23,7 @@ public class JobTest {
 				new CoreCompetency("Persistence")
 		);
 
-//	tests that Job second constructor assigns class & value to each field
+//	tests that second Job constructor assigns class & value to each field
 		assertEquals(job.getName(), "Product tester");
 		assertTrue(job.getEmployer() instanceof Employer);
 		assertEquals(job.getEmployer().getValue(), "ACME");
@@ -37,11 +37,10 @@ public class JobTest {
 
 	@Test
 	public void testJobsForEquality() {
-		/*
-		generate two Job objects with same field values EXCEPT id
-		test that .equals() returns false
-		don't test if two jobs share same ID
-		*/
+//	generates two Job objects with same field values EXCEPT id
+//	tests that .equals() returns false
+//	NOT testing if two jobs share same ID
+
 		Job job1 = new Job(
 				"Product tester",
 				new Employer("ACME"),
@@ -129,7 +128,7 @@ public class JobTest {
 	@Test
 	public void testIdOnlyJob() {
 //		if Job object ONLY contains id field data
-//			job.toString() returns "OOPS! This job does not seem to exist."
+//			then job.toString() returns "OOPS! This job does not seem to exist."
 		Job job = new Job();
 		assertEquals(job.toString(), "OOPS! This job does not seem to exist.");
 	}
