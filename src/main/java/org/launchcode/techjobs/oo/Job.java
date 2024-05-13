@@ -48,13 +48,8 @@ public class Job {
     public String toString() {
 
         String dna = "Data not available";
-        String noJobMsg = "OOPS! This job does not seem to exist.";
 
-        if (name == null) { return noJobMsg; }
-        if (employer == null) { return noJobMsg; }
-        if (location == null) { return noJobMsg; }
-        if (positionType == null) { return noJobMsg; }
-        if (coreCompetency == null) { return noJobMsg; }
+        if (name == null) { return "OOPS! This job does not seem to exist."; }
 
         String strName = name;
         String strEmployer = employer.toString();

@@ -22,7 +22,6 @@ public class Main {
 
 /*
 TODO INSTRUCTIONS:
-
  ////////////////////////////////////////////////////////////////////////////
     use objects to encapsulate data & methods
     use IntelliJ generator to automate routine tasks

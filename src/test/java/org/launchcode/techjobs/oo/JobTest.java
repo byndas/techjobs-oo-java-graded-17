@@ -111,7 +111,7 @@ public class JobTest {
 				new CoreCompetency("")
 		);
 
-		String dna = "Data not available"; // must replace each empty field
+		String dna = "Data not available"; // replaces each empty field
 
 		assertEquals(
 				System.lineSeparator() +
@@ -128,9 +128,8 @@ public class JobTest {
 
 	@Test
 	public void testIdOnlyJob() {
-//		tests if Job object ONLY contains id field data
+//		if Job object ONLY contains id field data
 //			job.toString() returns "OOPS! This job does not seem to exist."
-
 		Job job = new Job();
 		assertEquals(job.toString(), "OOPS! This job does not seem to exist.");
 	}
